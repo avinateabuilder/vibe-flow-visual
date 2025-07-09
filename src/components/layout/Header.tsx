@@ -10,7 +10,8 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Building, Bell, Settings, User, LogOut, Zap } from "lucide-react";
+import { Building, Bell, Settings, User, LogOut, Zap, Sun, Moon } from "lucide-react";
+import { useTheme } from "next-themes";
 
 interface HeaderProps {
   userName?: string;
@@ -23,6 +24,7 @@ export function Header({
   userAvatar,
   notifications = 3 
 }: HeaderProps) {
+  const { theme, setTheme } = useTheme();
   return (
     <motion.header
       initial={{ opacity: 0, y: -20 }}
@@ -66,6 +68,21 @@ export function Header({
               >
                 {notifications}
               </Badge>
+            )}
+          </Button>
+
+          {/* Theme Toggle */}
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="hover:bg-primary/10"
+            title="Cambiar tema"
+          >
+            {theme === "dark" ? (
+              <Sun className="w-5 h-5" />
+            ) : (
+              <Moon className="w-5 h-5" />
             )}
           </Button>
 
