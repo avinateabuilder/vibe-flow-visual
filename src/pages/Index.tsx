@@ -6,6 +6,7 @@ import { DepartmentGrid } from "@/components/department/DepartmentGrid";
 import { StatsOverview } from "@/components/stats/StatsOverview";
 import { ObjectivesList } from "@/components/objectives/ObjectivesList";
 import { WorkspaceLayout } from "@/components/workspace/WorkspaceLayout";
+import { UserManagementDashboard } from "@/components/users/UserManagementDashboard";
 import { mockDepartments } from "@/data/mockData";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
