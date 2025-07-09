@@ -80,14 +80,56 @@
   }
 
   .light {
-    /* Light Mode Override (Optional) */
-    --background: 0 0% 100%;
-    --surface: 210 40% 98%;
-    --card: 0 0% 100%;
-    --foreground: 222 84% 5%;
-    --muted-foreground: 215 16% 47%;
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
+    /* Light Mode Colors */
+    --background: 0 0% 100%;                  /* Blanco puro */
+    --surface: 210 40% 98%;                   /* Blanco grisáceo */
+    --card: 0 0% 100%;                        /* Blanco puro para cards */
+    --foreground: 222 84% 5%;                 /* Navy oscuro para texto */
+    --muted-foreground: 215 16% 40%;          /* Gris medio para texto secundario */
+
+    /* Enhanced Light Mode Design Tokens */
+    --primary: var(--vibework-primary);       /* Mantiene índigo vibrante */
+    --primary-foreground: 0 0% 100%;          /* Blanco para contraste */
+    --secondary: var(--vibework-secondary);   /* Mantiene púrpura */
+    --secondary-foreground: 0 0% 100%;        /* Blanco para contraste */
+    --accent: var(--vibework-accent);         /* Mantiene cyan */
+    --accent-foreground: 0 0% 100%;           /* Blanco para contraste */
+    --success: var(--vibework-success);       /* Mantiene verde */
+    --warning: var(--vibework-warning);       /* Mantiene ámbar */
+    --error: var(--vibework-error);           /* Mantiene rojo coral */
+
+    --card-foreground: 222 84% 5%;            /* Navy para texto en cards */
+    --popover: 0 0% 100%;                     /* Blanco para popovers */
+    --popover-foreground: 222 84% 5%;         /* Navy para texto popover */
+    --destructive: var(--error);              /* Rojo coral */
+    --destructive-foreground: 0 0% 100%;      /* Blanco para contraste */
+    --muted: 210 40% 96%;                     /* Gris muy claro */
+    --border: 214 32% 91%;                    /* Bordes suaves */
+    --input: 214 32% 96%;                     /* Input backgrounds */
+    --ring: var(--primary);                   /* Focus ring */
+
+    /* Light Mode Glass & Neo Effects */
+    --glass-bg: rgba(255, 255, 255, 0.7);    /* Cristal blanco translúcido */
+    --glass-border: rgba(148, 163, 184, 0.2); /* Bordes suaves */
+    --neo-shadow-light: 0 8px 32px rgba(99, 102, 241, 0.08); /* Sombra suave */
+    --neo-shadow-dark: 0 8px 32px rgba(0, 0, 0, 0.04);       /* Sombra sutil */
+    --neo-inset: inset 0 1px 0 rgba(255, 255, 255, 0.8);     /* Highlight interno */
+
+    /* Light Mode Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-surface: linear-gradient(135deg, hsl(var(--surface)) 0%, hsl(var(--card)) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--success)) 100%);
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(var(--primary) / 0.1) 0%, transparent 70%);
+
+    /* Light Mode Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
